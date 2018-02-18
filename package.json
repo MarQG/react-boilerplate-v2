@@ -1,13 +1,13 @@
 {
   "name": "boilerplate-react-app",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "main": "index.js",
   "author": "Ferenc Gutierrez",
   "license": "MIT",
   "scripts": {
     "build:dev": "webpack",
     "build:prod": "webpack -p --env production",
-    "dev-server": "webpack-dev-server",
+    "dev-server": "concurrently \"webpack-dev-server\" \"yarn start\" ",
     "test": "cross-env NODE_ENV=test jest --config=jest.config.json",
     "start": "node server/server.js",
     "heroku-postbuild": "yarn run build:prod"
@@ -21,6 +21,8 @@
     "babel-polyfill": "^6.26.0",
     "babel-preset-env": "^1.6.1",
     "babel-preset-react": "^6.24.1",
+    "concurrently": "^3.5.1",
+    "cors": "^2.8.4",
     "css-loader": "^0.28.7",
     "express": "^4.16.2",
     "extract-text-webpack-plugin": "^3.0.2",
@@ -59,5 +61,6 @@
     "jest": "^22.1.1",
     "react-test-renderer": "^16.2.0",
     "webpack-dev-server": "^2.9.5"
-  }
+  },
+  "proxy":"http://localhost:4000"
 }

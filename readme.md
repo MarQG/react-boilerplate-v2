@@ -1,4 +1,4 @@
-#React App Boilerplate Code Version 2
+# React App Boilerplate Code Version 2
 
 This is boilerplate for building a full stack application using the MERN Stack. Please feel free to use it as starter code for your projects.
 
